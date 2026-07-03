@@ -22,3 +22,13 @@ plt.xlabel('Number of values')
 plt.ylabel('GLD Price')
 plt.legend()
 plt.show
+
+# Prediction
+input_data = pd.DataFrame(
+    [[1447.160034, 78.470001, 15.18, 1.471692]],
+    columns=['SPX', 'USO', 'SLV', 'EUR/USD']
+)
+
+prediction = regressor.predict(input_data)
+
+print("Predicted Gold Price:", prediction[0])
